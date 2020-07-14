@@ -4,8 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lemon</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Special+Elite&display=swap&display=swap");
+    </style>
   </head>
   <body>
-    <h1>Note</h1>
+    <div class="nav-bar">
+      <ul style="display: flex;">
+        <li>Know-how</li>
+        <li>Resume</li>
+        <li>My Works</li>
+        <li>Contact Me</li>
+      </ul>
+    </div>
+    <div class="container">
+      <h2 class="topic">Note</h2>
+      <div class="content">
+        <div class="block">
+          <h3 class="title">link vs. import</h3>
+          <ol>
+            <li>
+              link是XHTML標籤，無兼容問題；@import則是CSS的範疇，只能載入CSS，且可能會產生瀏覽器(低版本)不支援的問題。
+            </li>
+            <li>
+              用link呼叫CSS時，在頁面載入時同步加載；@import需先載入網頁再加載CSS。
+            </li>
+            <li>
+              link支持利用JS控制DOM去改變樣式；@import則不支持。
+            </li>
+          </ol>
+        </div>
+        <div class="block">
+          <h3 class="title">關於CSS</h3>
+          <ul>
+            <li>關於SCSS：https://frankknow.com/sass-tutorial/</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-wrap">
+        <span>
+          The copyright of this website is held by Lemon, an enthusiastic
+          front-end engineer.
+        </span>
+      </div>
+    </div>
   </body>
 </html>
