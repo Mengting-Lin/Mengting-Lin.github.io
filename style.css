@@ -15,7 +15,11 @@ body {
   margin: 0;
   background: white;
   font-family: var(--eng-font);
+  cursor: url("https://img.icons8.com/material-rounded/24/000000/cursor.png"),
+    pointer;
 }
+
+/* navbar */
 .nav-bar {
   background: var(--primary-color);
   color: var(--font-color);
@@ -24,26 +28,44 @@ body {
   margin: 0 auto;
   padding: 0;
   list-style: none;
-  width: 80%;
+  width: 70%;
+  font-size: 1.2rem;
 }
 .nav-bar li {
-  padding: 20px 30px;
+  padding: 25px 30px;
   width: 25%;
   text-align: center;
 }
+.nav-bar li:hover {
+  background: #8d9cad;
+  transition: 0.5s;
+
+}
+.nav-bar li > a {
+  text-decoration: none;
+  color: white;
+  cursor: url("https://img.icons8.com/material-rounded/24/000000/cursor.png"),
+    pointer;
+}
+
+/* 中間空白區 */
 .container {
   width: 70%;
   margin: 60px auto;
 }
+/* 主題 */
 .topic {
   margin: 0;
   padding: 10px 20px;
 }
+
+/* 內文區 */
 .content {
   background: var(--third-color);
   border: 1px dashed lightgray;
-  padding: 0 20px;
+  padding: 30px 50px;
 }
+/* 內文區塊 */
 .block {
   font-family: var(--chinese-font);
   margin: 1.5rem;
@@ -55,15 +77,128 @@ body {
   margin: 0.5rem;
 }
 .block > ul,
+dl,
 ol {
   margin: 0.5rem 0;
 }
+.button {
+  padding: 5px;
+}
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.table li:nth-child(odd) {
+  width: 25%;
+  list-style: none;
+  padding: 5px;
+}
+.table li:nth-child(even) {
+  width: 70%;
+  list-style: none;
+  padding: 5px;
+}
+
+/* back按鈕 */
+.scroll-to-top {
+  background: var(--primary-color);
+  opacity: 0.8;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  position: fixed;
+  right: 60px;
+  bottom: 90px;
+  transition: 0.5s;
+  height: 60px;
+  width: 60px;
+}
+.scroll-to-top:hover {
+  cursor: pointer;
+  opacity: 1;
+  height: 70px;
+  width: 70px;
+}
+.scroll-to-top i {
+  color: white;
+  font-size: 2rem;
+  line-height: 70px;
+}
+.scroll-to-top i:hover {
+  line-height: 80px;
+
+}
+
+/* 履歷 */
+.resume {
+  font-family: var(--chinese-font);
+}
+
+/* works */
+.display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var(--chinese-font);
+  align-items: center;
+}
+.display-left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.display-left .table {
+  padding: 0;
+}
+.display-left .table li:nth-child(odd) {
+  width: 30%;
+  border: 1px dashed var(--primary-color);
+}
+.display-left .table li:nth-child(even) {
+  width: 60%;
+  border: 1px dashed var(--primary-color);
+}
+.display-right {
+  height: 100%;
+  margin-left: 15px;
+  margin-top: 30px;
+}
+.display-right ul {
+  list-style: none;
+  padding: 0;
+}
+.display-right img {
+  height: 620px;
+  border: 1px solid var(--third-color);
+}
+.display-right img:hover {
+  transition: transform 0.2s ease-in-out;
+}
+#list-ul li {
+  border: none;
+  list-style-type: disc;
+  width: 95%;
+}
+#list-ol li {
+  border: none;
+  list-style-type: decimal;
+  width: 95%;
+}
+
+/* footer */
 .footer {
   background: var(--primary-color);
   color: var(--font-color);
-  padding: 25px;
+  text-align: center;
 }
 .footer-wrap {
-  width: 70%;
+  width: 65%;
   margin: 0 auto;
+  padding: 25px 30px;
+  line-height: 1.5rem;
 }
+
+/* Free Icon */
+/* https://icons8.com/icons */
+/* https://www.twicon.page/icons.html */
