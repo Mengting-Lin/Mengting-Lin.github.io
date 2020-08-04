@@ -1,0 +1,27 @@
+.scroll-to-top {
+  background: var(--primary-color);
+  opacity: 0.8;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  position: fixed;
+  right: 60px;
+  bottom: 90px;
+  transition: 0.5s;
+  height: 60px;
+  width: 60px;
+}
+.scroll-to-top:hover {
+  cursor: pointer;
+  opacity: 1;
+  height: 70px;
+  width: 70px;
+}
+.scroll-to-top i {
+  color: white;
+  font-size: 2rem;
+  line-height: 60px;
+}
+.scroll-to-top i:hover {
+  line-height: 70px;
+}

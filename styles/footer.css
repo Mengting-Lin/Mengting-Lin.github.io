@@ -1,0 +1,12 @@
+
+.footer {
+    background: var(--primary-color);
+    color: var(--font-color);
+    text-align: center;
+  }
+  .footer-wrap {
+    width: 65%;
+    margin: 0 auto;
+    padding: 25px 30px;
+    line-height: 1.5rem;
+  }

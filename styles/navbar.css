@@ -1,0 +1,27 @@
+
+.nav-bar {
+    background: var(--primary-color);
+    color: var(--font-color);
+  }
+  .nav-bar ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 70%;
+    font-size: 1.2rem;
+  }
+  .nav-bar li {
+    padding: 25px 30px;
+    width: 25%;
+    text-align: center;
+  }
+  .nav-bar li:hover {
+    background: #8d9cad;
+    transition: 0.5s;
+  }
+  .nav-bar li > a {
+    text-decoration: none;
+    color: white;
+    cursor: url("https://img.icons8.com/material-rounded/24/000000/cursor.png"),
+      pointer;
+  }

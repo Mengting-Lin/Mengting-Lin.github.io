@@ -4,132 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lemon</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Special+Elite&display=swap&display=swap");
-    </style>
   </head>
   <body>
-    <div class="nav-bar">
-      <ul style="display: flex;">
-        <li><a id="#" href="index.html">Know-how</a></li>
-        <li><a href="myresume.html">Resume</a></li>
-        <li><a href="myworks.html">My Works</a></li>
-        <li><a href="contact.html">Contact Me</a></li>
-      </ul>
-    </div>
+    <div id="navbar"></div>
     <div class="container">
-      <h2 class="topic">Note</h2>
-      <div class="content">
-        <div class="block">
-          <h3 class="title">前端考題</h3>
-          <ul>
-            <li>
-              https://github.com/h5bp/Front-end-Developer-Interview-Questions
-            </li>
-            <li>leetcode</li>
-          </ul>
-        </div>
-        <div class="block">
-          <h3 class="title">網域 Domain Name</h3>
-          <ul>
-            <li>github page</li>
-            <li>免費網域：https://www.000webhost.com/</li>
-            <li>購買網域：https://ithelp.ithome.com.tw/articles/10198925</li>
-            <li>
-              檢查網址黑歷史：google「site:網站名稱」、Archive.org查詢歷史紀錄
-            </li>
-            <li>
-              Whois工具：查詢申請人資訊--網域申請者、網域註冊商、網域有效時間
-            </li>
-          </ul>
-        </div>
-        <div class="block">
-          <h3 class="title">React</h3>
-          <ul>
-            <li>
-              https://github.com/kdchang/reactjs101
-            </li>
-            <li>
-              推薦課程：https://www.udemy.com/course/complete-react-developer-zero-to-mastery/
-            </li>
-          </ul>
-        </div>
-        <div class="block">
-          <h3 class="title">關於CSS</h3>
-          <ul>
-            <li>
-              選擇器：https://developer.mozilla.org/zh-TW/docs/Glossary/CSS_Selector
-            </li>
-            <li>
-              對齊：text-align(內部元件水平置中)、vertical-align(垂直置中，只適用於行內元素)
-            </li>
-            <li>More：https://muki.tw/tech/align-introduce/</li>
-            <li>
-              Flex：https://www.oxxostudio.tw/articles/201501/css-flexbox.html
-            </li>
-            <li>關於SCSS：https://frankknow.com/sass-tutorial/</li>
-          </ul>
-          <h3 class="title">link vs. import</h3>
-          <ol>
-            <li>
-              link是XHTML標籤，無兼容問題；@import則是CSS的範疇，只能載入CSS，且可能會產生瀏覽器(低版本)不支援的問題。
-            </li>
-            <li>
-              用link呼叫CSS時，在頁面載入時同步加載；@import需先載入網頁再加載CSS。
-            </li>
-            <li>
-              link支持利用JS控制DOM去改變樣式；@import則不支持。
-            </li>
-          </ol>
-        </div>
-      </div>
+      <div id="knowhow"></div>
+      <div id="myresume"></div>
+      <div id="myworks"></div>
+      <div id="contact"></div>
     </div>
     <div class="scroll-to-top" onclick="topFunction()">
       <i class="fa fa-angle-up"></i>
     </div>
-    <div class="footer">
-      <div class="footer-wrap">
-        <span>
-          The copyright of this website is held by Lemon, an enthusiastic
-          front-end engineer.
-        </span>
-      </div>
-    </div>
-    <script
-      src="https://use.fontawesome.com/releases/v5.13.1/js/all.js"
-      data-auto-replace-svg="nest"
-    ></script>
+    <div id="footer"></div>
+
+    <script src="scroll.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-      //Get the button:
-      mybutton = document.getElementsByClassName("scroll-to-top")[0];
-      console.log(mybutton)
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
+      $(document).ready(function () {
+        $("#navbar").load("navbar.html");
+        $("#knowhow").load("knowhow.html");
+        $("#footer").load("footer.html");
+      });
+      $(function(){
+        var $li = $('.nav-bar li');
+          $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+      
+          $li.click(function(){
+              $($(this).find('a'). attr ('href')).show().siblings ('.tab-inner').hide();
+              $(this).addClass('active'). siblings ('.active').removeClass('active');
+          });
+      });
     </script>
   </body>
 </html>

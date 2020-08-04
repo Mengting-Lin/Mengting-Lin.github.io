@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>前端考題</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Special+Elite&display=swap&display=swap"/>
+    <style>
+      .answer-table li {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      .answer-table li:nth-child(odd) {
+        width: 25%; 
+        border-right: none;
+      }
+      .answer-table li:nth-child(even) {
+        width: 65%; 
+      }
+      #answer > li {
+          border: none;
+          list-style-type: disc;
+          width: 100%;
+          padding: 0;
+      }
+    </style>
+  </head>
+  <body style="width: 80%;margin: 0 auto;font-family: 'Noto Sans TC', sans-serif;">
+    <div class="container" style="">
+      <h2 class="topic" style="text-align: center;">前端考題</h2>
+      <div class="content" style="">
+        <ul class="answer-table" style="list-style: none; display: flex;justify-content: center;flex-wrap: wrap;">
+          <li>What does a doctype do?</li>
+          <li>
+              <ul id="answer">
+                  <li>Document Type的簡寫，代表文件類型。</li>
+                  <li>不同的版本有不同的宣告格式，告知你的瀏覽器這個文件是用哪個版本的HTML（或XML）撰寫。</li>
+                  <li>Doctype是一種宣告，而非tag。</li>
+                  <li>必須放在第一行，位於<html>標籤之前，否則瀏覽器會認不得。（由W3C組織負責制定HTML的標準）</li>
+                  <li>如未宣告，compatMode預設為怪異模式，會按瀏覽器自己的方式渲染頁面。宣告則為標準模式，瀏覽器需按W3C標準渲染頁面。</li>
+              </ul>           
+          </li>
+          <li>How do you serve a page with content in multiple languages?</li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
